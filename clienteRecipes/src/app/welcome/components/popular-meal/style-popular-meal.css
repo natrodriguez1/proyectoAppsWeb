@@ -8,4 +8,38 @@ h1 span{
   text-decoration-thickness: 2px;
   text-underline-offset: 1.5rem;
 }
+.food-panel{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  min-width: 0;
+  max-width: 100%;
+  max-height: 100%;
+  background-clip: border-box;
+  word-wrap: break-word;
+  overflow: hidden;
+}
+.food-panel-body{
+  color: #333333;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: center;
 
+}
+.food-panel-title{
+  font-weight: bold;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+}
+
+.food-panel-text{
+  font-size: 1.1rem;
+}
+
+.food-panel-img{
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  object-fit: cover;
+}
