@@ -1,0 +1,11 @@
+h1{
+  color: #333333;
+
+}
+h1 span{
+  text-decoration: underline;
+  text-decoration-color: #ed1f1f;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1.5rem;
+}
+
