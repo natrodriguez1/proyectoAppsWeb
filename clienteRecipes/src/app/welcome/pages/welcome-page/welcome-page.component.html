@@ -1,62 +1,13 @@
-<div class="container-fluid shadow-sm">
-  <header class=" lh-1 py-3 w-100">
-    <div class="border-bottom row flex-nowrap justify-content-center align-items-center">
-      <div class="col-4 text-center">
-        <a class="blog-header-logo text-body-emphasis text-decoration-none fs-1 fw-bold" href="#">DevChef</a>
-      </div>
-    </div>
-    <div class="row justify-content-left align-items-left">
-      <div class="col-4 text-center d-flex justify-content-center gap-3 m-2">
-        <a class="text-decoration-none text-body-emphasis fw-semibold" routerLink="/countries" routerLinkActive="active">Countries</a>
-        <a class="text-decoration-none text-body-emphasis fw-semibold" href="#">Ingredients</a>
-      </div>
-    </div>
-  </header>
-</div>
-    <!-- component main-->
-<main>
-  <section class="container mt-5">
-    <!-- component buttons -->
-      <div class="d-flex justify-content-center">
-        <h1>RECIPIES BASED ON DIETARY PREFERENCES</h1>
-      </div>
-      <div class="d-flex align-items-center justify-content-center gap-2 mt-3">
-        <button class="btn btn-primary rounded-pill"><span class="fw-semibold fs-6">Vegetarian</span></button>
-        <button class="btn btn-primary rounded-pill"><span class="fw-semibold fs-6">Vegan</span></button>
-        <button class="btn btn-primary rounded-pill"><span class="fw-semibold fs-6">Lamb</span></button>
-        <button class="btn btn-primary rounded-pill"><span class="fw-semibold fs-6">Chicken</span></button>
-        <button class="btn btn-primary rounded-pill"><span class="fw-semibold fs-6">Misc</span></button>
-      </div>
-      <!-- Component cards -->
-      <div class="d-flex align-items-center gap-3 mt-5">
-        <div class="card" style="width: 18rem;">
-          <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="card-img-top" alt="food">
-          <div class="card-body">
-            <h5 class="card-title">Hamburger Vegan</h5>
-          </div>
-        </div>
 
-        <div class="card" style="width: 18rem;">
-          <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="card-img-top" alt="food">
-          <div class="card-body">
-            <h5 class="card-title">Hamburger Vegan</h5>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="card-img-top" alt="food">
-          <div class="card-body">
-            <h5 class="card-title">Hamburger Vegan</h5>
-          </div>
-        </div>
-
-        <div class="card" style="width: 18rem;">
-          <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="card-img-top" alt="food">
-          <div class="card-body">
-            <h5 class="card-title">Hamburger Vegan</h5>
-          </div>
-        </div>
-      </div>
-  </section>
+  <app-navbar />
+  <!-- component main-->
+<main style="margin-top: 5rem;">
+<section class="container">
+  <!-- component buttons -->
+   <app-menu-buttons />
+    <!-- Component cards -->
+     <app-cards />
+</section>
 
 </main>
+
