@@ -1,0 +1,13 @@
+.title-text{
+  color: #eb0000;
+}
+.custom-link{
+  color: #333333;
+  text-decoration: none;
+}
+.custom-link:hover{
+  text-decoration: underline;
+  text-underline-offset: 15px;
+  text-decoration-color: #eb0000;
+  text-decoration-thickness: 2px;
+}
