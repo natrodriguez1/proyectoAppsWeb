@@ -1,8 +1,23 @@
+
+h1, h2{
+  color: #333333;
+
+}
+
+h2 span{
+  text-decoration: underline;
+  text-decoration-color: #cb2828;  ;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 2rem;
+}
+
 .col {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
+    gap: 10px;
   }
+
   a {
     margin-top: 10px;
     font-size: 18px;

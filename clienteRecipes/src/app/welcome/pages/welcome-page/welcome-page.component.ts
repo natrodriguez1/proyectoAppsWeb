@@ -5,7 +5,8 @@ import { NavbarComponent } from "../../../shared/navbar/navbar.component";
 
 @Component({
   selector: 'app-welcome-page',
-  imports: [],
+  standalone: true,
+  imports: [NavbarComponent, CardsComponent, MenuButtonsComponent],
   templateUrl: './welcome-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

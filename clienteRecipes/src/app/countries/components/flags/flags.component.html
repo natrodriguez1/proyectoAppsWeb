@@ -1,7 +1,7 @@
 <section class="container mt-5">
       <div class="container text-center">
-        <h1>Recetas por país</h1>   
-        <h2>Aquí encontraras las recetas de cada país</h2>
+        <h1>Cuisine by Country</h1> 
+        <h2> Enter </h2>
       </div>
       <br><br>
       <div class="d-flex align-items-center">
@@ -9,12 +9,12 @@
           @for (country of countries; track country.strArea) {
             <div class="col text-center row row-cols-1  align-items-center">
 
-              <a routerLink="/countries" routerLinkActive="active">
+              <a [routerLink] ="[country.strArea]" routerLinkActive="active">
                 <img src="https://flagcdn.com/us.svg" alt="flag" 
-                class="flag-img">
+                class="img-fluid">
               </a>
 
-              <a routerLink="/countries" routerLinkActive="active"> {{country.strArea}} </a>
+              <a [routerLink] ="[country.strArea]" routerLinkActive="active"> {{country.strArea}} </a>
 
             </div>
           }

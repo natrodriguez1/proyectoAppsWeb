@@ -32,6 +32,7 @@ export class FlagsComponent {
       this.countries = data.meals || [];
       console.log('countries: ', data.meals || []);
       this.cdr.detectChanges();
+
     });
   }
 
