@@ -20,9 +20,7 @@ export class FlagsComponent {
   constructor(
     private countriesService: CountriesService,
     private cdr: ChangeDetectorRef
-  ){
-   
-  }
+  ){}
 
   ngOnInit(): void {
     this.countriesService.obtenerPaises().subscribe(respuesta => {
