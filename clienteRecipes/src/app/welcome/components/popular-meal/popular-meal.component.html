@@ -1,13 +1,17 @@
 
 <div class="d-flex justify-content-center mb-5">
-  <!-- <h1>THE ME<span>AL OF THE</span> DAY</h1> -->
   <h1><span>THE MEAL OF THE DAY</span></h1>
 </div>
 
 <div class="food-panel">
   <div class="food-panel-body">
-    <h2 class="food-panel-title">Vegan Burger</h2>
-    <p class="food-panel-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus dolores quidem repellendus iusto pariatur harum nisi ratione a vitae tempora debitis cupiditate totam, dolorem quos distinctio explicabo reiciendis maiores optio!</p>
+    <h2 class="food-panel-title">{{meal?.strMeal}}</h2>
+    <p class="food-panel-text">{{meal?.strInstructions}}</p>
   </div>
-  <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="food-panel-img" alt="food">
+  <!-- <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="food-panel-img" alt="food"> -->
+  <img [src]="meal?.strMealThumb" class="food-panel-img" alt="{{meal?.idMeal}}">
+
+
+
+
 </div>
