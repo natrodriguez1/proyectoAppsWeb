@@ -1,53 +1,33 @@
-<div class="d-flex justify-content-center">
-    <h1><span>Recipes by ingredients</span></h1>
-</div>
-<br/>
+<section class="container text-center">
+    <h1>Recipes by ingredients</h1> 
+    <p style="font-size:larger;"> Find recipes using the ingredients you have on hand. Search by ingredients you have at home!
+    </p>
+</section>
 
-<!-- <div class="card" style="width: 18rem;">
-    @for (ingredient of ingredients; track ingredient.idIngredient){
-        @if(!($index > 24)){
-            <img src="..." class="card-img-top" alt="...">
-                <div class="card-body">
-                <h5 class="card-title">{{ingredient.strIngredient}}</h5>
-                <p class="card-text">{{ingredient.strDescription}}</p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-        }
-        
-    } @empty{
-        empty media
-    }
-    
-</div> -->
+<br><br>
+
+<app-search></app-search>
+<br><br>
+
 <div class="row row-cols-1 row-cols-md-3 g-4">
     @for (ingredient of ingredients; track ingredient.idIngredient){
-        @if(!($index > 24)){
+        @if(!($index > 17)){
             <div class="col">
                 <div class="card h-100">
-                  <img src="..." class="card-img-top" alt="...">
+                  <img src={{photos[$index].url}} style="height: 16vw;" class="card-img-top" alt="...">
                   <div class="card-body">
                     <h5 class="card-title">{{ingredient.strIngredient}}</h5>
-                    <p class="card-text">{{ingredient.strDescription}}</p>
+                    <div>
+                        <p class="card-text truncate-text">{{ingredient.strDescription}}</p>
+                    </div>                    
                   </div>
                   <div class="card-footer">
-                    <small class="text-body-secondary">Last updated 3 mins ago</small>
+                    <a href="#" class="btn btn-warning">View</a>
                   </div>
                 </div>
-              </div>
+            </div>
         }
     }
     
     
-  </div>
-
-<!-- <div class="row row-cols-1 row-cols-md-3 g-4">
-    <div class="col">
-      
-        @for (ingredient of ingredients; track ingredient.idIngredient){
-            @if(!($index > 24)){
-                
-            }
-        }
-      
-    </div>
-</div> -->
+</div>
