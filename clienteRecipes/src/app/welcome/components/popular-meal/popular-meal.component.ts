@@ -13,8 +13,6 @@ export class PopularMealComponent implements OnInit{
   meal: Meal| null = null;
   private apiService = inject(WelcomeServicesService);
 
-  // constructor(private apiService: WelcomeServicesService){}
-
   ngOnInit(): void {
       this.apiService.getRandomMeal().subscribe(response =>{
         this.meal = response?.meals[0] ?? null;
