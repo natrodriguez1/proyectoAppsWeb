@@ -1,23 +1,22 @@
 <section class="container mt-5">
-      <div class="container text-center">
-        <h1>Cuisine by Country</h1> 
-        <h2> Enter </h2>
-      </div>
-      <br><br>
-      <div class="d-flex align-items-center">
-        <div class="d-flex align-items-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-          @for (country of countries; track country.strArea) {
-            <div class="col text-center row row-cols-1  align-items-center">
+  <div class="container text-center">
+    <h1>Cuisine by Country</h1> 
+    <h2> Click on <span>a country to see all its delicious</span> recipes! </h2>
+  </div>
+  <br><br><br>
+  <div class="d-flex align-items-center">
+    <div class="d-flex align-items-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      @for (country of countries; track country.strArea) {
+        <div class="col text-center row row-cols-1  align-items-center">
 
-              <a [routerLink] ="[country.strArea]" routerLinkActive="active">
-                <img src="https://flagcdn.com/us.svg" alt="flag" 
-                class="img-fluid">
-              </a>
+          <a [routerLink] ="[country.strArea]" routerLinkActive="active">
+            <img [src]="'assets/' + country.strArea + '.png'" alt="{{country.strArea}}" class="img-fluid" style="border: 0.25px solid #999999; width: 256px;height: 170px;"> 
+          </a>
 
-              <a [routerLink] ="[country.strArea]" routerLinkActive="active"> {{country.strArea}} </a>
+          <a [routerLink] ="[country.strArea]" routerLinkActive="active"> {{country.strArea}} </a>
 
-            </div>
-          }
         </div>
-      </div>
+      }
+    </div>
+  </div>
 </section>

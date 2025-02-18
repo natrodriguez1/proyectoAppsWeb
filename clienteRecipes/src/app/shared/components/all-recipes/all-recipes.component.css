@@ -1,0 +1,40 @@
+.food-panel{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    min-width: 0;
+    max-width: 100%;
+    max-height: 100%;
+    background-clip: border-box;
+    word-wrap: break-word;
+    overflow: hidden;
+  }
+
+  .food-panel-body{
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    flex-grow: 1;
+    overflow: auto;
+  }
+  .food-panel-title{
+    font-weight: bold;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+  }
+  
+  .food-panel-text{
+    font-size: 1.1rem;
+  }
+  
+  .food-panel-img {
+    width: 400px;
+    height: auto;
+    border-radius: 1rem;
+    object-fit: cover;
+    margin-left: 2rem;
+  }
+  
