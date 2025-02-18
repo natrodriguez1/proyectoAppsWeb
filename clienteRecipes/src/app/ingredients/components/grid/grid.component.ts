@@ -2,11 +2,12 @@ import { ChangeDetectorRef, Component } from '@angular/core';
 import { IngredientsService } from '../../services/ingredients.service';
 import { Ingredients } from '../../interfaces/ingredients';
 import { SearchComponent } from '../search/search.component';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-grid',
   standalone: true,
-  imports: [SearchComponent],
+  imports: [SearchComponent, RouterLink, RouterLinkActive],
   providers: [IngredientsService],
   templateUrl: './grid.component.html',
   styleUrl: './grid.component.css'

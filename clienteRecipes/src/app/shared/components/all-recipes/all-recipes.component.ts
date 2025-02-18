@@ -28,19 +28,6 @@ export class AllRecipesComponent {
       this.cdr.detectChanges();
     } )
   }
-    
-    /*if (this.filterType == "countries") {
-      this.countriesService.obtenerRecetasPais(this.filterValue).subscribe(respuesta => {
-        const data = respuesta as any;
-        this.meals = data.meals || [];
-        console.log("filter type: " + this.filterType);
-        console.log("filter value: " + this.filterValue);
-        this.cdr.detectChanges();
-        
-      })
-    }else if(this.filterType == "ingredients"){
-
-    }*/
   
 
 }
