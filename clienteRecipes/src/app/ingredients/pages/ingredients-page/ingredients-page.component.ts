@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { FooterComponent } from '../../../shared/footer/footer.component';
-import { NavbarComponent } from '../../../shared/navbar/navbar.component';
+import { FooterComponent } from '../../../shared/components/footer/footer.component';
+import { NavbarComponent } from '../../../shared/components/navbar/navbar.component';
 import { GridComponent } from '../../components/grid/grid.component';
 
 @Component({
