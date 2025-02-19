@@ -1,12 +1,23 @@
 
 <br>
-@for (meal of meals; track $index) {
-    <div class="food-panel">
-        <div class="food-panel-body">
-            <h2 class="food-panel-title">{{meal.strMeal}}</h2>
-            <p class="food-panel-text">{{meal.strInstructions}}</p>
-        </div>
-        <!-- <img src="https://cdn.pixabay.com/photo/2014/10/19/20/59/hamburger-494706_960_720.jpg" class="food-panel-img" alt="food"> -->
-        <img [src]="meal.strMealThumb" class="food-panel-img" alt="{{meal.idMeal}}">
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @for (meal of meals; track $index) {
+            <div class="col">
+                <div class="card h-100">
+                <img [src]="meal.strMealThumb" style="height: 20vw;" class="card-img-top"alt="{{meal.idMeal}}"> 
+                <div class="card-body">
+                    <h5 class="card-title">{{meal.strMeal}}</h5>
+                    <div>
+                        {{meal.strInstructions}}
+                        <p class="card-text truncate-text">{{meal.strCategory}}</p>
+                    </div>                    
+                </div>
+                <div class="card-footer">
+                    <a [routerLink] ="[meal.strMeal]" class="btn btn-warning" routerLinkActive="active"> View</a>
+                </div>
+                </div>
+            </div>
+
+        }
     </div>
-}

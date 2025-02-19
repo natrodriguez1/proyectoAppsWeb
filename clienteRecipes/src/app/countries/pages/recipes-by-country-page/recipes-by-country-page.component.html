@@ -1,9 +1,12 @@
 <app-navbar />
 
 <main style="margin: 5rem 0;">
-    <h1>{{countryName}}</h1>
+    <section class="container">
+        <h1>{{countryName}}</h1>
 
-    <app-all-recipes [filterType]="'a'" [filterValue]="countryName"/>
+        <app-all-recipes [filterType]="'a'" [filterValue]="countryName"/>
+    </section>
+    
 </main>
 
 <app-footer />
