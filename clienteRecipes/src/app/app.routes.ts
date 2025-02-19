@@ -12,12 +12,6 @@ export const routes: Routes = [
     path: 'countries',
     loadComponent: () => import('./countries/pages/countries-page/countries-page.component'),
 
-    /*children:[
-      {
-        path:'/:countryName',
-        component: RecipesByCountryPageComponent,
-      }
-    ]*/
   },
 
   {
@@ -32,6 +26,11 @@ export const routes: Routes = [
   {
     path:'ingredients',
     loadComponent: () => import('./ingredients/pages/ingredients-page/ingredients-page.component'),
+  },
+
+  {
+    path:'ingredients/:ingredient',
+    component: RecipesByIngredientsPageComponent,
   },
 
 
