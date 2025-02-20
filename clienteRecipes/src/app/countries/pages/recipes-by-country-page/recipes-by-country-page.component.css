@@ -1,0 +1,22 @@
+h1{
+    text-align: center;
+    color: #333333;
+}
+
+h1 span{
+    text-decoration: underline;
+    text-decoration-color: #eb0000;  ;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 1rem;
+}
+
+
+img{
+    height: 500px;
+    width: 800px;
+    align-items: center;
+}
+
+hr{
+    color: rgba(0, 0, 0, 0)00;
+}
