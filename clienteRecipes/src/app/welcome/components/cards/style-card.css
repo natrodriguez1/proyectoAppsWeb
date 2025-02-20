@@ -28,3 +28,30 @@
   font-weight: bold;
   font-size: x-large;
 }
+
+@media (max-width: 768px) {
+  .custom-card {
+    width: 250px;
+    height: 375px;
+  }
+
+  .custom-card-title {
+    font-size: large;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-card {
+    width: 200px;
+    height: 300px;
+  }
+
+  .custom-card-body {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+  }
+
+  .custom-card-title {
+    font-size: medium;
+  }
+}

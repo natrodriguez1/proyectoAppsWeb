@@ -1,14 +1,14 @@
-
-<div class="d-flex justify-content-center mb-5">
-  <h1><span>THE MEAL OF THE DAY</span></h1>
-</div>
-
-<div class="food-panel">
-  <div class="food-panel-body">
-    <h2 class="food-panel-title">{{meal?.strMeal}}</h2>
-    <p class="food-panel-text">{{meal?.strInstructions}}</p>
+<div class="container">
+  <div class="d-flex justify-content-center mb-5">
+    <h1><span>THE MEAL OF THE DAY</span></h1>
   </div>
 
-  <img [src]="meal?.strMealThumb" class="food-panel-img" alt="{{meal?.idMeal}}">
+  <div class="food-panel">
+    <div class="food-panel-body">
+      <h2 class="food-panel-title">{{meal?.strMeal}}</h2>
+      <p class="food-panel-text">{{meal?.strInstructions}}</p>
+    </div>
 
+    <img [src]="meal?.strMealThumb" class="food-panel-img" alt="{{meal?.idMeal}}">
+  </div>
 </div>

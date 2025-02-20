@@ -1,20 +1,24 @@
-<div class="d-flex align-items-center gap-4" style="margin-top: 4rem;">
-  <div *ngIf="loading" class="text-center w-100">
-    Loading meals...
-  </div>
 
-  <div *ngIf="error" class="text-center w-100 text-danger">
-    {{ error }}
-  </div>
+<div class="container">
+  <div class="d-flex flex-wrap justify-content-center align-items-center gap-4" style="margin-top: 4rem;">
+    <div *ngIf="loading" class="text-center w-100">
+      Loading meals...
+    </div>
 
-  <div *ngIf="!loading && !error && meals.length === 0" class="text-center w-100">
-    No meals found for this category.
-  </div>
+    <div *ngIf="error" class="text-center w-100 text-danger">
+      {{ error }}
+    </div>
 
-  <div *ngFor="let meal of meals | slice:0:4" class="custom-card">
-    <img [src]="meal.strMealThumb" class="custom-card-img" [alt]="meal.strMeal">
-    <div class="custom-card-body">
-      <h5 class="custom-card-title">{{ meal.strMeal }}</h5>
+    <div *ngIf="!loading && !error && meals.length === 0" class="text-center w-100">
+      No meals found for this category.
+    </div>
+
+    <!-- Meal cards -->
+    <div *ngFor="let meal of meals | slice:0:4" class="custom-card">
+      <img [src]="meal.strMealThumb" class="custom-card-img" [alt]="meal.strMeal">
+      <div class="custom-card-body">
+        <h5 class="custom-card-title">{{ meal.strMeal }}</h5>
+      </div>
     </div>
   </div>
 </div>
