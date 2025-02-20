@@ -2,8 +2,18 @@
 
 <main style="margin: 5rem 0;">
     <section class="container">
-        <h1>{{countryName}}</h1>
+        <div class="title">
+            <h1><span>{{countryName}} Food</span></h1>
+        </div>
 
+        <br><br>
+        <div class="container text-center">
+            <img class="img-fluid" [src]="'assets/' + countryName + '.png'" alt="{{countryName}}" style="border: 0.25px solid #999999;">
+        </div>
+
+        <hr>
+
+        <br>
         <app-all-recipes [filterType]="'a'" [filterValue]="countryName"/>
     </section>
     
