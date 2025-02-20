@@ -1,12 +1,12 @@
-
-<app-navbar></app-navbar>
+<app-navbar />
 
 <main style="margin: 5rem 0;">
-    <h1>{{ingredient}}</h1>
+    <section class="container">
+        <h1>{{ingredientName}}</h1>
 
-    <app-all-recipes [filterType]="'i'" [filterValue]="ingredient"/>
+        <app-all-recipes [filterType]="'i'" [filterValue]="ingredientName"/>
+    </section>
+    
 </main>
 
-<footer>
-    <app-footer></app-footer>
-</footer>
+<app-footer />

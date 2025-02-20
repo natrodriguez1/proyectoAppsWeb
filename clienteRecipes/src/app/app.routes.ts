@@ -20,6 +20,10 @@ export const routes: Routes = [
     path:'countries/:countryName',
     component: RecipesByCountryPageComponent,
   },
+  {
+    path:'ingredients/:ingredientName',
+    component: RecipesByIngredientsPageComponent,
+  },
 
   {
     path:'ingredients',
