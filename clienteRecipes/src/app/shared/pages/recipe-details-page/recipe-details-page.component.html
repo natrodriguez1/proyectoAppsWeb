@@ -1,6 +1,29 @@
 <app-navbar/>
-<main>
-    <h1>{{mealName}}</h1>
+<main style="padding: 3%;">
+    
+    <div class="card text-center">
+        <div class="card-header">
+            <b>Category: </b>{{recipe.strCategory}}
+            <b style="padding-left: 2%;">Origin: </b>{{recipe.strArea}}
+            
+            
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">{{mealName}}</h5>
+          <img src={{recipe.strMealThumb}} class="img-fluid" alt="...">
+        </div>
+        <ul class="list-group list-group-flush">
+            @for(instruction of instructions; track instruction){
+                @if(instruction.length > 0){
+                    <li class="list-group-item">{{$index + 1}}.- {{instruction}}</li>
+                }
+                
+            }
+        </ul>
+        <div class="card-footer text-body-secondary" style="padding: 2%;">
+            Still not sure how to make it? <br/><br/><a href={{recipe.strYoutube}} class="btn btn-primary">Watch tutorial!</a>
+        </div>
+    </div>
 </main>
 
 <footer>
