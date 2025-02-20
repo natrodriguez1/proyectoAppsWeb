@@ -2,11 +2,12 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, Input } from '@a
 import { Meal } from '../../../shared/interfaces/meal';
 import { WelcomeServicesService } from '../../services/welcome-services.service';
 import { CommonModule } from '@angular/common';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-cards',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterLink, RouterLinkActive],
   templateUrl: './cards.component.html',
   styleUrl: './style-card.css',
   changeDetection: ChangeDetectionStrategy.OnPush,

@@ -18,6 +18,7 @@
       <img [src]="meal.strMealThumb" class="custom-card-img" [alt]="meal.strMeal">
       <div class="custom-card-body">
         <h5 class="custom-card-title">{{ meal.strMeal }}</h5>
+        <a [routerLink] ="'../recipes/' + [meal?.strMeal]" class="btn btn-warning" routerLinkActive="active"> View </a>
       </div>
     </div>
   </div>
