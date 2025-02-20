@@ -1,13 +1,68 @@
-.title-text{
+.title-text {
   color: #eb0000;
+  font-size: 2.5rem;
 }
-.custom-link{
+
+.custom-link {
   color: #333333;
   text-decoration: none;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
 }
-.custom-link:hover{
+
+.custom-link:hover {
   text-decoration: underline;
   text-underline-offset: 15px;
   text-decoration-color: #eb0000;
   text-decoration-thickness: 2px;
+}
+
+@media (max-width: 768px) {
+  .title-text {
+    font-size: 2rem;
+  }
+
+  .custom-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .custom-link:hover {
+    text-underline-offset: 12px;
+  }
+}
+
+@media (max-width: 576px) {
+  .title-text {
+    font-size: 1.75rem;
+  }
+
+  .custom-link {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.9rem;
+  }
+
+  .custom-link:hover {
+    text-underline-offset: 10px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .title-text {
+    font-size: 1.5rem;
+  }
+
+  .custom-link {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-links {
+    gap: 0.25rem;
+  }
 }

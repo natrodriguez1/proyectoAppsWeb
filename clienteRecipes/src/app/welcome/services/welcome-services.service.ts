@@ -7,16 +7,17 @@ import { Meal } from '../../shared/interfaces/meal';
   providedIn: 'root'
 })
 export class WelcomeServicesService {
-  private apiUrl = 'https://www.themealdb.com/api/json/v1/1/categories.php'
+
   private apiUrlRandom = 'https://www.themealdb.com/api/json/v1/1/random.php';
 
   constructor(private http: HttpClient) { }
 
-  getCategories(): Observable<{meals: Meal[]}>{
-    return this.http.get<{meals: Meal[]}>(this.apiUrl);
-  }
   getRandomMeal(): Observable<{meals: Meal[]}>{
     return this.http.get<{meals: Meal[]}>(this.apiUrlRandom);
   }
-
+  getMealByCategory(category: string): Observable<{meals: Meal[]}>{
+    const apiUrlMealByCategory = `https://www.themealdb.com/api/json/v1/1/filter.php?c=${category}`;
+    console.log('API URL:', apiUrlMealByCategory);
+    return this.http.get<{meals: Meal[]}>(apiUrlMealByCategory);
+  }
 }
