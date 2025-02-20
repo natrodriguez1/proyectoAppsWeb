@@ -1,11 +1,12 @@
 import { ChangeDetectorRef,Component, inject, OnInit } from '@angular/core';
 import { WelcomeServicesService } from '../../services/welcome-services.service';
 import { Meal } from '../../../shared/interfaces/meal';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 @Component({
   selector: 'app-popular-meal',
   standalone: true,
-  imports: [],
+  imports: [RouterLink, RouterLinkActive],
   templateUrl: './popular-meal.component.html',
   styleUrl: './style-popular-meal.css',
 })
