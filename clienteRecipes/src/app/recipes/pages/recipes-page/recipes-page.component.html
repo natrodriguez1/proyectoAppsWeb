@@ -1,0 +1,23 @@
+<app-navbar/>
+
+<div class="container text-center shadow-sm" style="width: 1180px;">
+
+    @for (letra of alphabet; track letra){
+        <a [href]="'recipes/#' + letra" ><h2>{{ letra }}</h2></a>
+    }
+
+</div>
+<main>
+    <br>
+    <div class="container">
+        @for (letra of alphabet; track letra) {
+
+            <app-recipes-by-letter [letra]="letra"/>
+        }
+    </div>
+    
+</main>
+
+<footer>
+    <app-footer/>
+</footer>
