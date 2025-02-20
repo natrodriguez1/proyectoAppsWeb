@@ -1,9 +1,11 @@
 <app-navbar/>
 
-<div class="container text-center shadow-sm" style="width: 1180px;">
+<div class="container text-center shadow-sm" style="width: 990px;">
 
     @for (letra of alphabet; track letra){
-        <a [href]="'recipes/#' + letra" ><h2>{{ letra }}</h2></a>
+        @if (!excludedLetters.includes(letra)) {
+            <a (click)="scrollToSection(letra)" role="button" class="custom-link"><h2>{{ letra }}</h2></a>
+        }
     }
 
 </div>

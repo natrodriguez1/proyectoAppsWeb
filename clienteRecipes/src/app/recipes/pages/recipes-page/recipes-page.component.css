@@ -9,3 +9,9 @@ a{
 a:last-child {
     border-right: none;
 }
+
+.custom-link {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}

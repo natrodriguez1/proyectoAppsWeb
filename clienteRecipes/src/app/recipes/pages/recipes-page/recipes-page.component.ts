@@ -7,6 +7,7 @@ import { RecipesByLetterComponent } from '../../components/recipes-by-letter/rec
   selector: 'app-recipes-page',
   standalone: true,
   imports: [NavbarComponent, FooterComponent, RecipesByLetterComponent],
+  providers: [],
   templateUrl: './recipes-page.component.html',
   styleUrl: './recipes-page.component.css'
 })
@@ -14,6 +15,7 @@ import { RecipesByLetterComponent } from '../../components/recipes-by-letter/rec
 export class RecipesPageComponent {
 
   alphabet : string[] = [];
+  excludedLetters: string[] = ["Q", "U", "X", "Z"];
 
   constructor(){
   }
@@ -34,6 +36,13 @@ export class RecipesPageComponent {
     }
 
     this.alphabet = getAlphabet();
+  }
+
+  scrollToSection(letra: string) {
+    const section = document.getElementById(letra);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   }
   
 }
