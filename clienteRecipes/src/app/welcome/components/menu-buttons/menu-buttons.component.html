@@ -2,9 +2,9 @@
   <h1><span>RECIPES BASED ON DIETARY PREFERENCES</span></h1>
 </div>
 <div class="d-flex align-items-center justify-content-center gap-2 mt-5">
-  <button class="btn btn-menu rounded-pill"><span class="fw-semibold fs-6">Vegetarian</span></button>
-  <button class="btn btn-menu rounded-pill"><span class="fw-semibold fs-6">Vegan</span></button>
-  <button class="btn btn-menu rounded-pill"><span class="fw-semibold fs-6">Lamb</span></button>
-  <button class="btn btn-menu rounded-pill"><span class="fw-semibold fs-6">Chicken</span></button>
-  <button class="btn btn-menu rounded-pill"><span class="fw-semibold fs-6">Misc</span></button>
+  <button class="btn btn-menu rounded-pill" (click)="selectCategory('Vegetarian')"><span class="fw-semibold fs-6">Vegetarian</span></button>
+  <button class="btn btn-menu rounded-pill" (click)="selectCategory('Seafood')"><span class="fw-semibold fs-6">Seafood</span></button>
+  <button class="btn btn-menu rounded-pill" (click)="selectCategory('Dessert')"><span class="fw-semibold fs-6">Dessert</span></button>
+  <button class="btn btn-menu rounded-pill" (click)="selectCategory('Lamb')"><span class="fw-semibold fs-6">Lamb</span></button>
+  <button class="btn btn-menu rounded-pill" (click)="selectCategory('Miscellaneous')"><span class="fw-semibold fs-6">Misc</span></button>
 </div>

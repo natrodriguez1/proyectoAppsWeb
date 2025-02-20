@@ -3,8 +3,9 @@
 
 <main style="margin: 5rem 0;">
 <section class="container">
-   <app-menu-buttons />
-     <app-cards />
+  <app-menu-buttons (categorySelected)="updateCategory($event)"></app-menu-buttons>
+  <app-cards *ngIf="selectedCategory" [category]="selectedCategory"></app-cards>
+
 </section>
 
 <div style="margin: 7.4rem 0 7.4rem 0;"></div>

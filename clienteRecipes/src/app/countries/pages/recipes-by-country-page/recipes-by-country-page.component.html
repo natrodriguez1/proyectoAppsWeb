@@ -1,0 +1,10 @@
+<app-navbar />
+
+<main style="margin: 5rem 0;">
+    <h1>{{countryName}}</h1>
+
+    <app-all-recipes [filterType]="'a'" [filterValue]="countryName"/>
+</main>
+
+<app-footer />
+
