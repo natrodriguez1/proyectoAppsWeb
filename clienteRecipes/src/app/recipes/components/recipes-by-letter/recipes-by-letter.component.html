@@ -1,0 +1,29 @@
+
+@if (meals[0] != null) {
+    <br>
+    <section [id]="letra">
+        <div class="letra ">
+            <h1 style="color: white;">{{letra}}</h1>
+        </div>
+        <br>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gap-4" >
+            @for (meal of meals; track meal.idMeal) {
+                <div class="col row row-cols-1 mb-4">
+                    <div class="card h-100">
+                        <img src="{{meal.strMealThumb}}" style="height: 20vw;" class="card-img-top" alt="{{meal.strMeal}}">
+                        <div class="card-body">
+                            <h5 class="card-title">{{meal.strMeal}}</h5>
+                            <div>
+                                <p class="card-text truncate-text">{{meal.strInstructions}}</p>
+                            </div>                    
+                          </div>
+                          <div class="card-footer">
+                            <a class="btn btn-warning">View</a>
+                          </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </section>
+    <br><br>
+}

@@ -2,6 +2,7 @@ import { Routes } from '@angular/router';
 import { FlagsComponent } from './countries/components/flags/flags.component';
 import { RecipesByCountryPageComponent } from './countries/pages/recipes-by-country-page/recipes-by-country-page.component';
 import { RecipesByIngredientsPageComponent } from './ingredients/pages/recipes-by-ingredients-page/recipes-by-ingredients-page.component';
+import { RecipesPageComponent } from './recipes/pages/recipes-page/recipes-page.component';
 
 export const routes: Routes = [
   {
@@ -33,6 +34,10 @@ export const routes: Routes = [
     component: RecipesByIngredientsPageComponent,
   },
 
+  {
+    path:'recipes',
+    component: RecipesPageComponent,
+  },
 
   {
     path: '**',

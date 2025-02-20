@@ -1,0 +1,25 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 500;
+    width: 500;
+}
+
+.truncate-text {
+    display: -webkit-box;
+    line-clamp: 3; /* Número de líneas antes del truncado */
+    box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    height: 4.5em; /* Ajusta según el número de líneas */
+}
+
+.letra{
+    text-align: center;
+    background-color: #eb0000;
+    width: 100vw; 
+    position: relative; 
+    left: 50%; 
+    transform: translateX(-50%);
+}

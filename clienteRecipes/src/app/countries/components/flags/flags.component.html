@@ -9,11 +9,11 @@
       @for (country of countries; track country.strArea) {
         <div class="col text-center row row-cols-1  align-items-center">
 
-          <a [routerLink] ="[country.strArea]" routerLinkActive="active">
+          <a [routerLink] = "[country.strArea]" routerLinkActive="active">
             <img [src]="'assets/' + country.strArea + '.png'" alt="{{country.strArea}}" class="img-fluid" style="border: 0.25px solid #999999; width: 256px;height: 170px;"> 
           </a>
 
-          <a [routerLink] ="[country.strArea]" routerLinkActive="active"> {{country.strArea}} </a>
+          <a [routerLink] = "[country.strArea]" routerLinkActive="active"> {{country.strArea}} </a>
 
         </div>
       }
