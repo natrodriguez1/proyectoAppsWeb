@@ -1,27 +1,45 @@
 <app-navbar/>
 <main style="padding: 3%;">
     
-    <div class="card text-center">
-        <div class="card-header">
+    <div class="card">
+        <div class="card-header text-center">
             <b>Category: </b>{{recipe.strCategory}}
             <b style="padding-left: 2%;">Origin: </b>{{recipe.strArea}}
-            
-            
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{mealName}}</h5>
-          <img src={{recipe.strMealThumb}} class="img-fluid" alt="...">
-        </div>
-        <ul class="list-group list-group-flush">
-            @for(instruction of instructions; track instruction){
-                @if(instruction.length > 0){
-                    <li class="list-group-item">{{$index + 1}}.- {{instruction}}</li>
-                }
-                
-            }
-        </ul>
-        <div class="card-footer text-body-secondary" style="padding: 2%;">
-            Still not sure how to make it? <br/><br/><a href={{recipe.strYoutube}} class="btn btn-primary">Watch tutorial!</a>
+            <div class="container">
+                <div class="row">
+                  <div class="col-7">
+                    <h1 class="card-title">{{mealName}}</h1>
+                    <img src={{recipe.strMealThumb}} class="img-fluid" alt="...">
+                    <div class="text-body-secondary" style="padding: 2%;">
+                      Still not sure how to make it? <br/><a href={{recipe.strYoutube}} class="btn btn-primary">Watch tutorial!</a>
+                  </div>
+                  </div>
+                  <div class="col-5">
+                    <h3>Ingredients</h3>
+                    <ol class="list-group">
+                      @for(ingredient of ingredients; track $index){
+                        @if(ingredient.length > 0){ 
+                        <li class="list-group-item flex-fill">
+                          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
+                          {{measurments.at($index)}}
+                          <label class="form-check-label" for="firstCheckbox">{{ingredient}}</label>
+                        </li>
+                        }
+                      }
+                    </ol>
+                    <h3>Steps</h3>
+                    <ul class="list-group list-group-flush list-group-numbered">
+                        @for(instruction of instructions; track $index){
+                            @if(instruction.length > 2){
+                                <li class="list-group-item">{{instruction}}</li>
+                            }
+                        }
+                    </ul>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </main>
