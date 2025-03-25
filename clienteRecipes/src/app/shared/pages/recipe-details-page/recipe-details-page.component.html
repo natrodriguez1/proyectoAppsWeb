@@ -22,9 +22,9 @@
                       @for(ingredient of ingredients; track $index){
                         @if(ingredient.length > 0){ 
                         <li class="list-group-item flex-fill">
-                          <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckbox">
-                          {{measurments.at($index)}}
-                          <label class="form-check-label" for="firstCheckbox">{{ingredient}}</label>
+                          <input class="form-check-input me-1" type="checkbox" value="" id="checkbox${index}" oninput="crossOff($index)">
+                          
+                          <label class="form-check-label strikethrough" for="checkbox${index}">{{measurments.at($index)}} {{ingredient}}</label>
                         </li>
                         }
                       }
@@ -47,3 +47,9 @@
 <footer>
     <app-footer/>
 </footer>
+<script>
+  function crossOff(itemIndex){
+    var selected = document.getElementById("checkbox"+itemIndex).getAttribute;
+    console.log(document.getElementById("checkbox"+itemIndex).getAttribute);
+  }
+</script>
