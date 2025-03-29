@@ -1,17 +1,22 @@
 <header class="container-fluid shadow-sm mb-5 lh-1 py-3 w-100">
-
   <div class="border-bottom row justify-content-center align-items-center">
     <div class="col-12 text-center my-3">
       <a class="blog-header-logo text-decoration-none fw-bold title-text" routerLink="/home" routerLinkActive="active">DevChef</a>
     </div>
   </div>
 
-  <div class="row justify-content-center">
-    <div class="col-12 nav-links mt-3 d-flex justify-content-center align-items-center">
+  <div class="row mt-3">
+    <div class="col-2 d-none d-md-block">
+    </div>
+    <div class="col-md-8 nav-links d-flex justify-content-center align-items-center">
       <a class="custom-link fw-semibold mx-2" routerLink="/home" routerLinkActive="active">Home</a>
       <a class="custom-link fw-semibold mx-2" routerLink="/countries" routerLinkActive="active">Countries</a>
       <a class="custom-link fw-semibold mx-2" routerLink="/ingredients">Ingredients</a>
-      <a class="custom-link  fw-semibold  mx-2" routerLink="/recipes" >Recipes</a>
+      <a class="custom-link fw-semibold mx-2" routerLink="/recipes">Recipes</a>
+    </div>
+    <div class="col-md-2 d-flex justify-content-end align-items-center">
+      <a class="custom-link fw-semibold mx-2" routerLink="/register">Register</a>
+      <a class="custom-link fw-semibold mx-2" routerLink="/login">Login</a>
     </div>
   </div>
 </header>
