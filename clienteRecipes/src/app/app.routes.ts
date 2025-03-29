@@ -54,6 +54,10 @@ export const routes: Routes = [
     loadComponent:()=>import('./auth/pages/login/login.component'),
   },
   {
+    path:'register-recipie',
+    loadComponent:()=>import('./register-recipe/pages/register-recipe/register-recipe.component'),
+  },
+  {
     path: '**',
     redirectTo: 'home',
   }
