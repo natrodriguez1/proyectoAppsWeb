@@ -46,8 +46,13 @@ export const routes: Routes = [
   },
 
   {
+    path:'register',
+    loadComponent: () => import('./auth/pages/authentication.component'),
+  },
+
+  {
     path: '**',
     redirectTo: 'home',
   }
-  
+
 ];
