@@ -1,0 +1,274 @@
+commit 5c8bd039aa4e5eec08fdc26ab400fdfe599ebf87
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 01:14:16 2025 -0500
+
+    quita search bar
+
+commit b4f1cbf4a6cab3cf4d6683dec8d177643227b4d2
+Merge: 608f090 3acd1b2
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 01:14:13 2025 -0500
+
+    Merge remote-tracking branch 'origin/Juan-Diego'
+
+commit 608f0903f216fc3e3bf5dd893fde997fd3db835d
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 01:12:09 2025 -0500
+
+    conflicto navbar solucionado y view en home cards
+
+commit fcddf6fb07edd02df61b8fd9138ae22e37fb38ba
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 01:06:57 2025 -0500
+
+    navbar update
+
+commit 3acd1b22ceb94cc6f9aed08c50341b139ba6edda
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Thu Feb 20 01:05:26 2025 -0500
+
+    Cambios en diseño de página de recetas por país
+
+commit 93d63b87a74d630c1baad427d8d3fffda8105e9b
+Merge: 0044c35 5fb9fb1
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 01:04:49 2025 -0500
+
+    Merge remote-tracking branch 'origin/eduardo'
+
+commit 5fb9fb12d327393a6e61b3394f5ad0639eacb50e
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Thu Feb 20 00:57:44 2025 -0500
+
+    Update making responsive all welcome-page components and shared component navbar
+
+commit 0044c350ddb855749c0e403dcb51e57ea37def4f
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 00:55:21 2025 -0500
+
+    boton en popular meal
+
+commit 294123c4562af6b952c68b178b439ee3edde1a3f
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Thu Feb 20 00:31:50 2025 -0500
+
+    recipe details edited
+
+commit 564c37b22e7432d9bb5e3d84c0a252fc6116ccfd
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Thu Feb 20 00:25:04 2025 -0500
+
+    Added carousel component to welcome-page
+
+commit da443ae7797288302b53e1868b4eeff2081dcbf8
+Merge: c179c09 5ae594a
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Wed Feb 19 23:32:38 2025 -0500
+
+    Solución rutas de detalles de recetas
+
+commit c179c0966ef5f2ab3d467991eb9082c70f4e06c1
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Wed Feb 19 23:23:49 2025 -0500
+
+    Se agregó ruta para ver detalles de cada receta
+
+commit 5ae594a2f6b44e1319d168f8ca28d58b103e5e91
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Wed Feb 19 22:01:41 2025 -0500
+
+    bug fix
+
+commit af407eed5f84b7ee9511892adb586c92ff2aea71
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Wed Feb 19 21:59:22 2025 -0500
+
+    cambios
+
+commit a87bb95f404e88e49df5bac7ca5e852b39fe8bd5
+Merge: cd9776c 8ccee7e
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Wed Feb 19 21:58:27 2025 -0500
+
+    Merge remote-tracking branch 'origin/Juan-Diego' into natalie
+
+commit df0f347ffa5f4a98de4e105fef34bf766c895209
+Merge: 10d4978 c48b9b1
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Wed Feb 19 20:26:39 2025 -0500
+
+    Update components cards and menu-buttons, Update welcome-services
+
+commit 8ccee7e79e64e59167ae8ef6bb721820d152fc40
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Wed Feb 19 20:18:20 2025 -0500
+
+    Página recipes añadida, tengo que corregir todavía que no se muestren las letras que no muestran recetas
+
+commit cd9776c45ae60b44881d2694bb78826d92ba44ce
+Merge: b27c5c6 0055295
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Wed Feb 19 18:58:06 2025 -0500
+
+    Merge remote-tracking branch 'origin/Juan-Diego' into natalie
+
+commit b27c5c6fc75954c312ea44217448f437d5cda720
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Wed Feb 19 18:44:57 2025 -0500
+
+    estilo de overview de recetas
+
+commit 0055295f887fb058f4a9de91c0b4384efedbb4e2
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Mon Feb 17 22:08:50 2025 -0500
+
+    Merge e implementación del componente all-recipes en página ingredients
+
+commit 10d4978eecdaaaafd36df6beb93887a92b80c149
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Mon Feb 17 21:36:31 2025 -0500
+
+    Update popular-meal
+
+commit f6a1a2bd0bd04fa5a93cd8b67f8a4e0e701570e0
+Merge: a79e0b7 4bbc50d
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Mon Feb 17 21:31:19 2025 -0500
+
+    Merge remote-tracking branch 'origin/natalie' into Juan-Diego
+
+commit c48b9b18b5ace7f3b0848cd51d22ae8f81688abd
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Mon Feb 17 21:25:36 2025 -0500
+
+    import update
+
+commit 5df0b415a31f8f9f401c02bbb8c214b1bba818bc
+Merge: 4bbc50d a79e0b7
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Mon Feb 17 21:21:14 2025 -0500
+
+    Merge remote-tracking branch 'origin/Juan-Diego' into natalie
+
+commit a79e0b75fda38d43399fad2be32b3c4ba89bdd41
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Mon Feb 17 17:06:31 2025 -0500
+
+    Se añadió el componente que muestra todas las recetas en base a parámetros
+
+commit 6b71637a6a94ad685ca7aaabf107de97aa4a9017
+Merge: e8a325b c913f53
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Mon Feb 17 11:04:39 2025 -0500
+
+    Merge remote-tracking branch 'origin/eduardo' into Juan-Diego
+
+commit c913f5318bf196c03ec9343bf9e7d43f89553df9
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Mon Feb 17 00:12:33 2025 -0500
+
+    Update popular-meal and implement API TheMealDB
+
+commit 4bbc50d84dec71e0b0637b871fedfa3aa7e86588
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Sun Feb 16 21:56:58 2025 -0500
+
+    non-functional search bar
+
+commit 4cb8efd958424643864a19d1861fc0f3d3e46f23
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Sun Feb 16 21:56:27 2025 -0500
+
+    ingredients pics and non-functional search bar
+
+commit 1246bdbc1f3b4dd2de9dc7889f1a6cdc8be62d16
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Sun Feb 16 14:48:40 2025 -0500
+
+    basic ingredients grid
+
+commit e8a325b8c9369221998147dc6665651b98338ee2
+Merge: 0864066 d07aa4f
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Sat Feb 15 23:22:15 2025 -0500
+
+    Merge remote-tracking branch 'origin/eduardo' into Juan-Diego
+
+commit 0864066f5ba7d81bd810ba22ccc257cf48070c06
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Sat Feb 15 23:16:27 2025 -0500
+
+    Se añade la pagina que presentará las recetas por país
+
+commit d07aa4fa7c1a9ecf6e6d7d8ceebb891ec6d3a414
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Sat Feb 15 18:18:23 2025 -0500
+
+    Change underline titles menu-buttons and popular-meal
+
+commit c702b84d8521ece9d24b1593d0207f45044a3ede
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Sat Feb 15 18:10:49 2025 -0500
+
+    Update popular-meal
+
+commit f497cf354e4bdf33379ca60449683361372c446b
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Sat Feb 15 13:52:44 2025 -0500
+
+    Added bootstrap-icons, Update footer component
+
+commit 6b595a82e57d195466dec7ec398aaa60c2f225f5
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Sat Feb 15 13:38:10 2025 -0500
+
+    Added footer component, Added popular-meal component
+
+commit 005ab953dd31bfc142efbd42a02aa5091f8a1647
+Merge: f01b01c 787411d
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Sat Feb 15 12:47:06 2025 -0500
+
+    Merge remote-tracking branch 'origin/eduardo' into Juan-Diego
+
+commit f01b01c98fe55a7e72f827caaea565af1b915195
+Author: JDJaramillo10 <juan.jaramillo@uees.edu.ec>
+Date:   Sat Feb 15 12:40:49 2025 -0500
+
+    Primer commit, probando diseños
+
+commit 787411d21aa44a2703010fa3aa5f0fef8edea8f3
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Sat Feb 15 12:05:20 2025 -0500
+
+    Added Custom Cards, Update navbar, Update menu-buttons
+
+commit d548fde0aa5b8fdbee249b6caaff38c296c5950e
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Thu Feb 13 08:08:25 2025 -0500
+
+    added welcome-page component
+
+commit 94fe0a152f5d657bc727c8e09dcbbf94526de5f0
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Wed Feb 12 21:52:47 2025 -0500
+
+    Update app
+
+commit 30ad7acf0f63e6781851437ec79fdf9edc7059e2
+Author: EduardoYaguar <eduardoyaguarf@gmail.com>
+Date:   Wed Feb 12 21:11:35 2025 -0500
+
+    Estructura del proyecto DevChef
+
+commit 781d978c3f437390abddef6d60b6daa99bcfbae4
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Tue Feb 4 10:34:38 2025 -0500
+
+    instalación de angular y bootstrap
+
+commit 08b7502c686ace6c74d1dc5083b5af46cb051e09
+Author: natalie <ntrodriguezch@hotmail.com>
+Date:   Tue Feb 4 09:52:11 2025 -0500
+
+    index

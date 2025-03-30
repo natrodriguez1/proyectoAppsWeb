@@ -1,14 +1,20 @@
 <app-navbar/>
+<section class="container">
+    <div class="container-fluid shadow-sm d-flex text-align-left row row-1 row-sm-2">
 
-<div class="container text-center shadow-sm" style="width: 990px;">
-
-    @for (letra of alphabet; track letra){
-        @if (!excludedLetters.includes(letra)) {
-            <a (click)="scrollToSection(letra)" role="button" class="custom-link"><h2>{{ letra }}</h2></a>
+        @for (letra of alphabet; track letra){
+            @if (!excludedLetters.includes(letra)) {
+                <div class="col">
+                    <a (click)="scrollToSection(letra)" role="button" class="custom-link"><h2>{{ letra }}</h2></a>
+                </div>
+                
+            }
         }
-    }
+    
+    </div>
 
-</div>
+</section>
+
 <main>
     <br>
     <div class="container">
