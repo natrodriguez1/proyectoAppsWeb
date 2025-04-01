@@ -28,10 +28,12 @@ export class CardsComponent {
     }
   }
 
+  /*
+  Esto funcionaba con la api anterior
   loadMealsByCategory(category: string) {
     this.apiService.getMealByCategory(category).subscribe({
       next: (response) => {
-        this.meals = response.meals ?? [];
+        this.meals = response || [];
         this.loading = false;
         this.cdr.markForCheck();
       },
@@ -42,7 +44,25 @@ export class CardsComponent {
         this.cdr.markForCheck();
       }
     });
-  }
+  }*/
+
+    loadMealsByCategory(category: string) {
+      this.apiService.getMealByCategory(category).subscribe({
+        next: (respuesta) => {
+          const data = respuesta as [];
+        this.meals = data;
+        this.loading = false;
+        this.cdr.detectChanges();
+        },
+        error: (error) => {
+          console.error('Error loading meals:', error);
+          this.error = 'Failed to load meals. Please try again.';
+          this.loading = false;
+          this.cdr.markForCheck();
+        }
+      });
+    }
+
 
 
 }

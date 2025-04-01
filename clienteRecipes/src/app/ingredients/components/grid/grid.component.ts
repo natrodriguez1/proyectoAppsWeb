@@ -23,8 +23,7 @@ export class GridComponent {
 
   ngOnInit(): void {
     this.ingredientsService.obtenerIngredientes().subscribe(respuesta => {
-      const data = respuesta as any;
-      this.ingredients = data.meals || [];
+      this.ingredients = respuesta ;
       this.cdr.detectChanges();
     });
   }

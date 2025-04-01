@@ -9,6 +9,6 @@ export class RecipesByLetterServiceService {
   constructor(private http: HttpClient) { }
 
   obtenerRecetasPorLetra(letra : string){
-    return this.http.get(`https://www.themealdb.com/api/json/v1/1/search.php?f=${letra}`)
+    return this.http.get(`http://localhost:3000/rest/meals/search?f=${letra}`)
   }
 }

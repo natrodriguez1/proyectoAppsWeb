@@ -15,11 +15,12 @@
 
     <!-- Meal cards -->
     <div *ngFor="let meal of meals | slice:0:4" class="custom-card">
-      <img [src]="meal.strMealThumb" class="custom-card-img" [alt]="meal.strMeal">
+      <img [src]="meal.thumbnail_url" class="custom-card-img" [alt]="meal.name">
       <div class="custom-card-body">
-        <h5 class="custom-card-title">{{ meal.strMeal }}</h5>
-        <a [routerLink] ="'../recipes/' + [meal?.strMeal]" class="btn btn-warning" routerLinkActive="active"> View </a>
+        <h5 class="custom-card-title">{{ meal.name }}</h5>
+        <a [routerLink] ="'../recipes/' + [meal?.name]" class="btn btn-warning" routerLinkActive="active"> View </a>
       </div>
     </div>
+
   </div>
 </div>

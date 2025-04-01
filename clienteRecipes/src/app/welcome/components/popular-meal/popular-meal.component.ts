@@ -11,14 +11,14 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   styleUrl: './style-popular-meal.css',
 })
 export class PopularMealComponent implements OnInit{
-  meal: Meal| null = null;
+  meal: any;
   private apiService = inject(WelcomeServicesService);
 
   constructor(private cdr: ChangeDetectorRef){}
 
   ngOnInit(): void {
       this.apiService.getRandomMeal().subscribe(response =>{
-        this.meal = response?.meals[0] ?? null;
+        this.meal = response;
         console.log('Api response: ', response);
         this.cdr.detectChanges();
       });

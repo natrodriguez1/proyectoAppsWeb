@@ -1,3 +1,5 @@
 export interface Countries {
-    strArea : string
+    id : number,
+    name : string,
+    img_url : string
 }

@@ -1,5 +1,5 @@
 export interface Ingredients {
     idIngredient: string;
-    strIngredient: string;
-    strDescription: string;
+    name: string;
+    img_url: string;
 }

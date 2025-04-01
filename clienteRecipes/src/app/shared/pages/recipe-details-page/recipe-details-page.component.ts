@@ -16,7 +16,7 @@ import { Meal } from '../../interfaces/meal';
 export class RecipeDetailsPageComponent {
 
   mealName: string = '';
-  recipe!: Meal;
+  meals: any;
   instructions: string[] = [];
 
   constructor(private detailService: RecipeDetailsService, private route: ActivatedRoute, private cdr: ChangeDetectorRef) {
@@ -27,9 +27,16 @@ export class RecipeDetailsPageComponent {
   }
   ngOnInit(): void {
     this.detailService.obtenerDetallesReceta(this.mealName).subscribe(respuesta => {
-      const data = respuesta as any;
-      this.recipe = data.meals[0] || data.meals[0][0];
-      this.instructions = this.recipe.strInstructions.split(".");
+      const data = respuesta as [];
+      this.meals = data || [];
+      if (this.meals.length > 0) {
+        // Usamos el primer elemento del array
+        this.meals = this.meals[0];
+        // Ajusta el delimitador: si el string utiliza "\r\n", usa ese; si es solo "\r", cámbialo.
+        this.instructions = this.meals.instructions.split("\r\n")
+          .map((line: string) => line.trim())
+          .filter((line: string) => line.length > 0);
+      }
       this.cdr.detectChanges();
     });
   }

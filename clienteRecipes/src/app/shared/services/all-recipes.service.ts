@@ -9,6 +9,6 @@ export class AllRecipesService {
   constructor(private http: HttpClient) { }
 
   obtenerRecetasPorParametro(strFilter: string, strValue: string){
-    return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?${strFilter}=${strValue}`);
+    return this.http.get(`http://localhost:3000/rest/meals/filter?${strFilter}=${strValue}`);
   }
 }

@@ -16,7 +16,7 @@ export class IngredientsService {
     if (this.cachedIngredients != null) {
       return of(this.cachedIngredients); 
     } else {
-      return this.http.get("https://www.themealdb.com/api/json/v1/1/list.php?i=list").pipe(
+      return this.http.get("http://localhost:3000/rest/ingredients/all").pipe(
         tap(data => this.cachedIngredients = data) 
       );
     }

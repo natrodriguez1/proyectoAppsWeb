@@ -3,14 +3,14 @@
     
     <div class="card text-center">
         <div class="card-header">
-            <b>Category: </b>{{recipe.strCategory}}
-            <b style="padding-left: 2%;">Origin: </b>{{recipe.strArea}}
+            <b>Category: </b>{{meals.category.name}}
+            <b style="padding-left: 2%;">Origin: </b>{{meals.area.name}}
             
             
         </div>
         <div class="card-body">
           <h5 class="card-title">{{mealName}}</h5>
-          <img src={{recipe.strMealThumb}} class="img-fluid" alt="...">
+          <img src={{meals.thumbnail_url}} class="img-fluid" alt="...">
         </div>
         <ul class="list-group list-group-flush">
             @for(instruction of instructions; track instruction){
@@ -21,7 +21,7 @@
             }
         </ul>
         <div class="card-footer text-body-secondary" style="padding: 2%;">
-            Still not sure how to make it? <br/><br/><a href={{recipe.strYoutube}} class="btn btn-primary">Watch tutorial!</a>
+            Still not sure how to make it? <br/><br/><a href={{meals.youtube_url}} class="btn btn-primary">Watch tutorial!</a>
         </div>
     </div>
 </main>

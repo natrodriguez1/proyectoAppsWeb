@@ -7,18 +7,18 @@
         </div>
         <br>
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 gap-4" >
-            @for (meal of meals; track meal.idMeal) {
+            @for (meal of meals; track meal.id) {
                 <div class="col row row-cols-1 mb-4">
                     <div class="card h-100">
-                        <img src="{{meal.strMealThumb}}" class="card-img-top" alt="{{meal.strMeal}}">
+                        <img src="{{meal.thumbnail_url}}" class="card-img-top" alt="{{meal.name}}">
                         <div class="card-body">
-                            <h5 class="card-title">{{meal.strMeal}}</h5>
+                            <h5 class="card-title">{{meal.name}}</h5>
                             <div>
-                                <p class="card-text truncate-text">{{meal.strInstructions}}</p>
+                                <p class="card-text truncate-text">{{meal.instructions}}</p>
                             </div>                    
                           </div>
                           <div class="card-footer">
-                            <a class="btn btn-warning" [routerLink]="'/recipes/' + [meal.strMeal]" routerLinkActive="active">View</a>
+                            <a class="btn btn-warning" [routerLink]="'/recipes/' + [meal.name]" routerLinkActive="active">View</a>
                           </div>
                     </div>
                 </div>

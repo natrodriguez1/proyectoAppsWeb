@@ -22,8 +22,8 @@ export class RecipesByLetterComponent {
 
   ngOnInit(){
     this.recipesByLetterService.obtenerRecetasPorLetra(this.letra).subscribe(respuesta =>{
-      const data = respuesta as any;
-      this.meals = data.meals || [];
+      const data = respuesta as [];
+      this.meals = data || [];
       this.cdr.detectChanges();
     })
   }

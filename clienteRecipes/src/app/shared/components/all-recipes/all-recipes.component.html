@@ -5,16 +5,16 @@
         @for (meal of meals; track $index) {
             <div class="col">
                 <div class="card h-100">
-                <img [src]="meal.strMealThumb" style="height: 20vw;" class="card-img-top"alt="{{meal.idMeal}}"> 
+                <img [src]="meal.thumbnail_url" style="height: 20vw;" class="card-img-top" alt="{{meal.id}}"> 
                 <div class="card-body">
-                    <h5 class="card-title">{{meal.strMeal}}</h5>
+                    <h5 class="card-title">{{meal.name}}</h5>
                     <div>
-                        {{meal.strInstructions}}
-                        <p class="card-text truncate-text">{{meal.strCategory}}</p>
+                        {{meal.instructions}}
+                        <p class="card-text truncate-text">{{meal.area[1]}}</p>
                     </div>                    
                 </div>
                 <div class="card-footer">
-                    <a class="btn btn-warning" [routerLink] ="'/recipes/' + [meal.strMeal]"  routerLinkActive="active"> View</a>
+                    <a class="btn btn-warning" [routerLink] ="'/recipes/' + [meal.name]"  routerLinkActive="active"> View</a>
                 </div>
                 </div>
             </div>

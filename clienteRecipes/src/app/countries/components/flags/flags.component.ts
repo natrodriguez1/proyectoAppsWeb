@@ -24,10 +24,8 @@ export class FlagsComponent {
 
   ngOnInit(): void {
     this.countriesService.obtenerPaises().subscribe(respuesta => {
-      const data = respuesta as any;
-      this.countries = data.meals || [];
+      this.countries = respuesta as [];
       this.cdr.detectChanges();
-
     });
   }
 

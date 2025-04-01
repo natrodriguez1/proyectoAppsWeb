@@ -16,13 +16,13 @@
                 <div class="card h-100">
                   <img src={{photos[$index].url}} class="card-img-top" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">{{ingredient.strIngredient}}</h5>
+                    <h5 class="card-title">{{ingredient.name}}</h5>
                     <div>
-                        <p class="card-text truncate-text">{{ingredient.strDescription}}</p>
+                        <p class="card-text truncate-text">{{ingredient.name}}</p>
                     </div>                    
                   </div>
                   <div class="card-footer">
-                    <a [routerLink] ="[ingredient.strIngredient]" class="btn btn-warning" routerLinkActive="active"> View </a>
+                    <a [routerLink] ="[ingredient.name]" class="btn btn-warning" routerLinkActive="active"> View </a>
                   </div>
                 </div>
             </div>
