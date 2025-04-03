@@ -2,6 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, AbstractControl, ValidationErrors, ValidatorFn, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { RegisterService } from '../../services/register.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-register-form',
@@ -16,7 +17,7 @@ export class RegisterFormComponent {
   registrationForm: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private registerService:RegisterService) {
+  constructor(private formBuilder: FormBuilder, private registerService:RegisterService, private router: Router) {
     this.registrationForm = this.formBuilder.group({
       username: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
@@ -59,6 +60,7 @@ export class RegisterFormComponent {
     this.registerService.register(this.registrationForm.value).subscribe({
       next: (response) => {
         console.log('Usuario registrado con éxito', response);
+        this.router.navigateByUrl("/login");
       },
       error: (error) => {
         console.error('Error al registrar el usuario', error);

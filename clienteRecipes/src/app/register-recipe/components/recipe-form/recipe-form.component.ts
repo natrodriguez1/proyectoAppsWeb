@@ -3,13 +3,12 @@ import { RegisterRecipeService } from '../../services/register-recipe.service';
 import { FormsModule } from '@angular/forms'; // Importa FormsModule
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { NgForm } from '@angular/forms';
 import { LoginService } from '../../../auth/services/login.service';
 import { CountriesService } from '../../../countries/services/countries.service';
 import { Countries } from '../../../countries/interfaces/countries';
 import { AllCategoriesService } from '../../services/all-categories.service';
 import { Categories } from '../../../shared/interfaces/category';
-
+import { Router } from '@angular/router';
 
 export interface IngredientInput {
   name: string;
@@ -41,7 +40,8 @@ export class RecipeFormComponent {
     private recipeService: RegisterRecipeService, 
     private loginService: LoginService, 
     private countriesService: CountriesService,
-    private allCategoriesService: AllCategoriesService
+    private allCategoriesService: AllCategoriesService,
+    private router: Router
   ) {}
 
   ngOnInit(): void {
@@ -57,14 +57,12 @@ export class RecipeFormComponent {
   addIngredient(): void {
 
     if (this.ingredient.name && this.ingredient.quantity && this.ingredient.unit) {
-      // Combina la cantidad y la unidad para formar el string measure, por ejemplo "500 g"
       const measure = `${this.ingredient.quantity} ${this.ingredient.unit}`;
       this.ingredients.push({
         name: this.ingredient.name,
         measure: measure
       });
 
-      // Reinicia el objeto newIngredient para el siguiente ingrediente
       this.ingredient = { name: '', quantity: 0.01, unit: '' };
     }
   }
@@ -106,6 +104,7 @@ export class RecipeFormComponent {
       next: response => {
         console.log('Recipe created successfully:', response);
         recipeForm.resetForm();
+        this.router.navigateByUrl(`/recipes/${recipeData.name}`);
       },
       error: error => {
         console.error('Error creating recipe:', error);

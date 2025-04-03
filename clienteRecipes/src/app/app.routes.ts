@@ -3,7 +3,8 @@ import { FlagsComponent } from './countries/components/flags/flags.component';
 import { RecipesByCountryPageComponent } from './countries/pages/recipes-by-country-page/recipes-by-country-page.component';
 import { RecipesByIngredientsPageComponent } from './ingredients/pages/recipes-by-ingredients-page/recipes-by-ingredients-page.component';
 import { RecipesPageComponent } from './recipes/pages/recipes-page/recipes-page.component';
-import { RecipeDetailsPageComponent } from './shared/pages/recipe-details-page/recipe-details-page.component';
+import { RecipeDetailsPageComponent } from './shared/pages/recipe-details-page/recipe-details-page.component'; 
+import { SearchComponent } from './shared/pages/search/search.component'; 
 
 export const routes: Routes = [
   {
@@ -60,6 +61,10 @@ export const routes: Routes = [
   {
     path:'about-us',
     loadComponent:()=>import('./about/pages/about-us/about-us.component'),
+  },
+  {
+    path:'search/:mealName',
+    component: SearchComponent
   },
   {
     path: '**',

@@ -6,21 +6,40 @@ import { PopularMealComponent } from "../../components/popular-meal/popular-meal
 import { FooterComponent } from "../../../shared/components/footer/footer.component";
 import { CommonModule } from '@angular/common';
 import { CarouselComponent } from "../../components/carousel/carousel.component";
+import { Router } from '@angular/router';
+import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
+
+
 @Component({
   selector: 'app-welcome-page',
   standalone: true,
-  imports: [MenuButtonsComponent, CardsComponent, NavbarComponent, PopularMealComponent, FooterComponent, CommonModule, CarouselComponent],
+  imports: [MenuButtonsComponent, CardsComponent, NavbarComponent, PopularMealComponent, FooterComponent, CommonModule, CarouselComponent, ReactiveFormsModule],
   templateUrl: './welcome-page.component.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export default class WelcomePageComponent {
 
+  searchForm: FormGroup;
   selectedCategory: string = '';
+
+  constructor(private router: Router, private formBuilder: FormBuilder,){
+    this.searchForm = this.formBuilder.group({
+      searchRecipe: ['', [Validators.required]]
+    });
+  }
 
   onCategorySelected(category: string){
     this.selectedCategory = category;
   }
   updateCategory(category: string){
     this.selectedCategory = category;
+  }
+
+  onSubmit(){
+    if (this.searchForm.invalid) {
+      return;
+    }
+
+    this.router.navigateByUrl(`/search/${this.searchForm.value}`);
   }
  }

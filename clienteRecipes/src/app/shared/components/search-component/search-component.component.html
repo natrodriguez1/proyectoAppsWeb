@@ -1,0 +1,22 @@
+<br>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @for (meal of meals; track $index) {
+            <div class="col">
+                <div class="card h-100">
+                <img [src]="meal.thumbnail_url" style="height: 20vw;" class="card-img-top" alt="{{meal.id}}"> 
+                <div class="card-body">
+                    <h5 class="card-title">{{meal.name}}</h5>
+                    <div>
+                        {{meal.instructions}}
+                        <p class="card-text truncate-text">{{meal.area[1]}}</p>
+                    </div>                    
+                </div>
+                <div class="card-footer">
+                    <a class="btn btn-warning" [routerLink] ="'/recipes/' + [meal.name]"  routerLinkActive="active"> View</a>
+                </div>
+                </div>
+            </div>
+
+        }
+    </div>
