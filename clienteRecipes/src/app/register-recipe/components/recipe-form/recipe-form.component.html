@@ -33,6 +33,17 @@
               </select>
             </div>
 
+            <div class="mb-3">
+              <label for="recipeArea" class="form-label">Category</label>
+              <select class="form-select" id="recipeArea">
+                <option selected disabled>Select a category</option>
+                <option value="American">Sweets</option>
+                <option value="British">Dairy</option>
+                <option value="Canadian">Seafood</option>
+                <option value="Chinese">Spices</option>
+              </select>
+            </div>
+
 
             <div class="mb-3">
               <label for="thumbnailUrl" class="form-label">Thumbnail Image URL</label>
@@ -54,6 +65,62 @@
               <div class="form-text">E.g. Breakfast, Vegetarian, Quick, Spicy</div>
             </div>
 
+            <div class="mb-3">
+              <label class="form-label">Ingredients</label>
+              <div class="card mb-3">
+                <div class="card-body">
+                  <div class="row g-3 mb-3">
+
+                    <div class="col-md-5">
+                      <input type="text" class="form-control" id="ingredientName" placeholder="Enter ingredient">
+                    </div>
+
+                    <div class="col-md-3">
+                      <input type="number" min="0.01" step="0.01" class="form-control" id="ingredientQuantity" placeholder="Amount">
+                    </div>
+
+                    <div class="col-md-3">
+                      <select class="form-select" id="ingredientUnit">
+                        <option selected disabled>Unit</option>
+
+                        <option value="count">count (pcs)</option>
+
+                        <option value="g">grams (g)</option>
+                        <option value="kg">kilograms (kg)</option>
+                        <option value="oz">ounces (oz)</option>
+                        <option value="lb">pounds (lb)</option>
+
+                        <option value="ml">milliliters (ml)</option>
+                        <option value="l">liters (l)</option>
+                        <option value="tsp">teaspoon (tsp)</option>
+                        <option value="tbsp">tablespoon (tbsp)</option>
+                        <option value="cup">cups</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-1">
+                      <button type="button" class="btn btn-danger" id="addIngredientBtn">
+                        <i class="bi bi-plus"></i>
+                      </button>
+                    </div>
+                  </div>
+
+
+                  <div id="ingredientList" class="list-group">
+
+                    <div class="list-group-item d-flex justify-content-between align-items-center example-ingredient">
+                      <span>Chicken breast - 500 g</span>
+                      <button class="btn btn-sm btn-outline-danger">&times;</button>
+                    </div>
+
+
+                    <div class="text-muted text-center py-2" id="emptyIngredientMsg">
+                      No ingredients added yet
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
             <div class="mb-3">
               <label for="instructions" class="form-label">Instructions</label>
