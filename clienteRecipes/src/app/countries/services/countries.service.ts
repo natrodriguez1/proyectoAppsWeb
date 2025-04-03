@@ -10,11 +10,11 @@ export class CountriesService {
   constructor(private http: HttpClient) { }
 
   obtenerPaises(){
-    return this.http.get('https://www.themealdb.com/api/json/v1/1/list.php?a=list');
+    return this.http.get('http://localhost:3000/rest/countries/all');
   }
 
   obtenerRecetasPais(strArea: string){
-    return this.http.get(`https://www.themealdb.com/api/json/v1/1/filter.php?a=${strArea}`);
+    return this.http.get(`http://localhost:3000/rest/meals/filter?a=${strArea}`);
   }
 
 }

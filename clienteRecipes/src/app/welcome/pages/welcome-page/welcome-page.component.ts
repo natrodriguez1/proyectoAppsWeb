@@ -39,7 +39,12 @@ export default class WelcomePageComponent {
     if (this.searchForm.invalid) {
       return;
     }
+<<<<<<< HEAD
     
     this.router.navigateByUrl(`/search/${this.searchForm}`);
+=======
+
+    this.router.navigateByUrl(`/search/${this.searchForm.value}`);
+>>>>>>> origin/Juan-Diego
   }
  }

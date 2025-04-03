@@ -6,15 +6,15 @@
   <br><br><br>
   <div class="d-flex align-items-center">
     <div class="d-flex align-items-center row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      @for (country of countries; track country.strArea) {
+      @for (country of countries; track country.name) {
         <div class="col text-center row row-cols-1  align-items-center">
 
-          <a [routerLink] = "[country.strArea]" routerLinkActive="active">
-            <img [src]="'assets/' + country.strArea + '.png'" alt="{{country.strArea}}"
+          <a [routerLink] = "[country.name]" routerLinkActive="active">
+            <img src="{{country.img_url}}" alt="{{country.name}}"
             class="img-fluid" style="border: 0.25px solid #999999; width: 256px;height: 170px;"> 
           </a>
 
-          <a [routerLink] = "[country.strArea]" routerLinkActive="active"> {{country.strArea}} </a>
+          <a [routerLink] = "[country.name]" routerLinkActive="active"> {{country.name}} </a>
 
         </div>
       }

@@ -9,6 +9,6 @@ export class RecipeDetailsService {
   constructor(private http: HttpClient) { }
 
   obtenerDetallesReceta(strMeal: string){
-    return this.http.get(`https://www.themealdb.com/api/json/v1/1/search.php?s=${strMeal}`);
+    return this.http.get(`http://localhost:3000/rest/meals/search?s=${strMeal}`);
   }
 }

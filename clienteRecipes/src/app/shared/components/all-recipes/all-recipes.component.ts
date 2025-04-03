@@ -24,8 +24,8 @@ export class AllRecipesComponent {
   ngOnInit(){
 
     this.allRecipesService.obtenerRecetasPorParametro(this.filterType, this.filterValue).subscribe(respuesta =>{
-      const data = respuesta as any;
-      this.meals = data.meals || [];
+      const data = respuesta as [];
+      this.meals = data;
       console.log(this.meals)
       this.cdr.detectChanges();
     } )
