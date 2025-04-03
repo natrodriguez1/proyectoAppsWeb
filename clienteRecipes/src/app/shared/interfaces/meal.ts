@@ -1,6 +1,7 @@
 import {Ingredients} from '../../ingredients/interfaces/ingredients';
 import {Countries} from '../../countries/interfaces/countries';
-import { category } from './category';
+import { Categories } from './category';
+import { User } from './user';
 
 export interface Meal {
   id: number;
@@ -12,5 +13,6 @@ export interface Meal {
   user_id: string;
   ingredients: Ingredients[];
   country: Countries[];
-  area: category[];
+  area: Categories[];
+  user: User[];
  }
