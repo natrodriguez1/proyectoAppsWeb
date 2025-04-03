@@ -4,6 +4,7 @@ import { NavbarComponent } from '../../components/navbar/navbar.component';
 import { FooterComponent } from '../../components/footer/footer.component';
 import { RecipeDetailsService } from '../../services/recipe-details.service';
 import { Meal } from '../../interfaces/meal';
+import { Ingredients } from '../../../ingredients/interfaces/ingredients';
 
 @Component({
   selector: 'app-recipe-details-page',
@@ -16,8 +17,10 @@ import { Meal } from '../../interfaces/meal';
 export class RecipeDetailsPageComponent {
 
   mealName: string = '';
-  meals: any;
+  meals: Meal[] = [];
+  meal: any;
   instructions: string[] = [];
+  ingredients: Ingredients[] = [];
 
   constructor(private detailService: RecipeDetailsService, private route: ActivatedRoute, private cdr: ChangeDetectorRef) {
     this.route.paramMap.subscribe(params => {
@@ -31,11 +34,14 @@ export class RecipeDetailsPageComponent {
       this.meals = data || [];
       if (this.meals.length > 0) {
         // Usamos el primer elemento del array
-        this.meals = this.meals[0];
+        this.meal = this.meals[0];
         // Ajusta el delimitador: si el string utiliza "\r\n", usa ese; si es solo "\r", cámbialo.
-        this.instructions = this.meals.instructions.split("\r\n")
+        this.instructions = this.meal.instructions.split("\r\n")
           .map((line: string) => line.trim())
           .filter((line: string) => line.length > 0);
+
+        this.ingredients = this.meal.ingredients as [];
+        console.log("medida ingrediente 1 " + this.ingredients[0].recipe_ingredients?.measure);
       }
       this.cdr.detectChanges();
     });

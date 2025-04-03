@@ -1,27 +1,43 @@
 <app-navbar/>
 <main style="padding: 3%;">
     
-    <div class="card text-center">
-        <div class="card-header">
-            <b>Category: </b>{{meals.category.name}}
-            <b style="padding-left: 2%;">Origin: </b>{{meals.area.name}}
-            
-            
+    <div class="card">
+        <div class="card-header text-center">
+            <b>Category: </b>{{meal.category.name}}
+            <b style="padding-left: 2%;">Origin: </b>{{meal.area.name}}
         </div>
         <div class="card-body">
-          <h5 class="card-title">{{mealName}}</h5>
-          <img src={{meals.thumbnail_url}} class="img-fluid" alt="...">
-        </div>
-        <ul class="list-group list-group-flush">
-            @for(instruction of instructions; track instruction){
-                @if(instruction.length > 0){
-                    <li class="list-group-item">{{$index + 1}}.- {{instruction}}</li>
-                }
-                
-            }
-        </ul>
-        <div class="card-footer text-body-secondary" style="padding: 2%;">
-            Still not sure how to make it? <br/><br/><a href={{meals.youtube_url}} class="btn btn-primary">Watch tutorial!</a>
+            <div class="container">
+                <div class="row">
+                  <div class="col-7">
+                    <h1 class="card-title">{{mealName}}</h1>
+                    <img src={{meal.thumbnail_url}} class="img-fluid" alt="...">
+                    <div class="text-body-secondary" style="padding: 2%;">
+                      Still not sure how to make it? <br/><a href={{meal.youtube_url}} class="btn btn-primary">Watch tutorial!</a>
+                  </div>
+                  </div>
+                  <div class="col-5">
+                    <h3>Ingredients</h3>
+                    <ol class="list-group">
+                      @for(ingredient of ingredients; track $index){
+                        <li class="list-group-item flex-fill">
+                          <input class="form-check-input me-1" type="checkbox" value="" id="checkbox${index}" oninput="crossOff($index)">
+                          
+                          <label class="form-check-label strikethrough" for="checkbox${index}">{{ingredient.recipe_ingredients?.measure}} {{ingredient.name}}</label>
+                        </li>
+                      }
+                    </ol>
+                    <h3>Steps</h3>
+                    <ul class="list-group list-group-flush list-group-numbered">
+                        @for(instruction of instructions; track $index){
+                            @if(instruction.length > 2){
+                                <li class="list-group-item">{{instruction}}</li>
+                            }
+                        }
+                    </ul>
+                  </div>
+                </div>
+              </div>
         </div>
     </div>
 </main>
@@ -29,3 +45,9 @@
 <footer>
     <app-footer/>
 </footer>
+<script>
+  function crossOff(itemIndex){
+    var selected = document.getElementById("checkbox"+itemIndex).getAttribute;
+    console.log(document.getElementById("checkbox"+itemIndex).getAttribute);
+  }
+</script>
